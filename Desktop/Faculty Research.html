@@ -1,0 +1,893 @@
+<style type="text/css">.container { position: relative; } .text-block { position: absolute; width: 100%; bottom: 0px; background-color: RGBa(144, 0, 40, .5); color: white; text-align: center; padding-top: 5px; cursor: pointer; transition: all 0.1s ease-out; } .text-block:hover { background: RGBa(144, 0, 40); } .overlay { position: fixed; top: 0; bottom: 0; left: 0; right: 0; background: rgba(0, 0, 0, 0.7); transition: opacity 500ms; visibility: hidden; opacity: 0; z-index: 5; } .overlay:target { visibility: visible; opacity: 1; } .popup { margin: 70px auto; padding: 20px; background: #fff; border-radius: 5px; width: 30%; position: relative; top: 20%; transition: all 5s ease-in-out; } .popup h2 { margin-top: 0; } .popup .close { position: absolute; top: 20px; right: 30px; transition: all 200ms; font-size: 30px; font-weight: bold; text-decoration: none; } .popup .close:hover { color: black; } .popup .content { max-height: 30%; overflow: auto; } @media screen and (max-width: 800px) { 	.mobilewrapper{width:100%!important; height:auto!important;} 		.colsplit{width:320px!important; float:left!important; display:block!important;} .box { width: 70%; } .popup { width: 70%; overflow-y:scroll; } .text-block { 	visibility: hidden; } table tr { 		display: block; 		} 		 table td { 		 display: block; 		 text-align: left; width:100%; 		} 		 		 table td::before { 		 float: left; 		} } .tabset > input[type="radio"] { position: absolute; left: -200vw; } .tabset .tab-panel { display: none; } .tabset > input:first-child:checked ~ .tab-panels > .tab-panel:first-child, .tabset > input:nth-child(3):checked ~ .tab-panels > .tab-panel:nth-child(2), .tabset > input:nth-child(5):checked ~ .tab-panels > .tab-panel:nth-child(3), .tabset > input:nth-child(7):checked ~ .tab-panels > .tab-panel:nth-child(4), .tabset > input:nth-child(9):checked ~ .tab-panels > .tab-panel:nth-child(5), .tabset > input:nth-child(11):checked ~ .tab-panels > .tab-panel:nth-child(6), .tabset > input:nth-child(13):checked ~ .tab-panels > .tab-panel:nth-child(7), .tabset > input:nth-child(15):checked ~ .tab-panels > .tab-panel:nth-child(8), .tabset > input:nth-child(17):checked ~ .tab-panels > .tab-panel:nth-child(9), .tabset > input:nth-child(19):checked ~ .tab-panels > .tab-panel:nth-child(10) { display: block; } /* Styling */ body { font: 16px/1.5em raleway-regular,"Helvetica Neue",Helvetica,Helvetica,Arial,sans-serif; color: rgb(51, 51, 51); } .tabset > label { position: relative; display: inline-block; padding: 15px 15px 25px; border: 1px solid transparent; border-bottom: 0; cursor: pointer; font-weight: 600; } .tabset > label::after { content: ""; position: absolute; left: 15px; bottom: 10px; width: 22px; height: 4px; background: rgb(131,128,112); } .tabset > label:hover, .tabset > input:focus + label { color: rgb(144,0,40); } .tabset > label:hover::after, .tabset > input:focus + label::after, .tabset > input:checked + label::after { background: rgb(144,0,40); } .tabset > input:checked + label { border-color: #ccc; border-bottom: 1px solid #fff; margin-bottom: -1px; } .tab-panel { padding: 30px 0; border-top: 1px solid #ccc; } /* Demo purposes only */ *, *:before, *:after { box-sizing: border-box; } body { padding: 30px; } .tabset { max-width: 65em; }
+</style>
+<style type="text/css">
+h4 {
+    color:#6A032C;
+}
+</style>
+<style type="text/css">
+h3{
+    color:white;
+}
+</style>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 18%;
+  padding: 10px;
+  height: 575px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.collapsible {
+  background-color: #maroon;
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #F7DBE6;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+</style>
+<div class="tabset"><!-- Tab 1 --><input aria-controls="Research" checked="checked" id="tab1" name="tabset" type="radio" /> <label for="tab1">Research Areas</label> <!-- Tab 2 --> <input aria-controls="Faculty" id="tab2" name="tabset" type="radio" /> <label for="tab2">Faculty Research</label>
+
+<div class="tab-panels">
+<section class="tab-panel" id="Research Areas">
+<table id="Research Areas" style="width:20%; background-color:#EAC9D6; text-align: left">
+	<div class="row">
+    <h3 style="text-align: center;width:96%;background-color:#6A032C;height:30px">Research Focus Areas</h3>
+  <div class="column" style="background-color:#EAC9D6;width:16%;height: 1100px">
+
+    
+      <h4>Adolescent & Youth Development</h4>
+      <dt>Abigail Ross</dt>
+      <dt>Howard Robinson</dt>
+      <dt>Jorden Devylder</dt>
+      <dt>Lawrence Farmer</dt>
+      <dt>Tina Maschi</dt>
+
+       <h4>Aging & Gerontology</h4>  
+        <dt>Amy Horowitz</dt>
+      <dt>Cathy Berkman</dt>
+      <dt>Janna Heyman</dt>
+      <dt>Judith R Smith</dt>
+      <dt>Tina Maschi</dt>
+
+      <h4>Communities & Organizations</h4>  
+        <dt>Gregory Acevedo</dt>
+      <dt>Howard Robinson</dt>
+      <dt>Janna Heyman</dt>
+      <dt>Kimberly Hudson</dt>
+      <dt>Laura J Wernick</dt>
+      <dt>Lauri Goldkind</dt>
+      <dt>Elizabeth Matthews</dt>
+      <dt>Rahbel Rahman</dt>
+
+      <h4>Child Welfare</h4> 
+     <dt>Fuhua Zhai</dt>
+     <dt>Howard Robinson</dt>
+
+
+      <h4>Criminal Justice</h4> 
+        <dt>Daniel Coleman</dt>
+      <dt>Jordan Devylder</dt>
+      <dt>Tina Maschi</dt>
+
+      <!--<h4>American Indian, Alaska Native, Native Hawaiian & Global Indigenous Populations</h4>
+       <dt>Howard Robinson</dt>
+
+       <h4>Asian & Asian-Pacific Islander Focused-Research</h4>
+       <dt>Cathy Berkman</dt>
+       <dt>Fuhua Zhai</dt>
+       <dt>Sameena Azhar</dt>
+       <dt>Winnie Kung</dt>-->
+
+     </div>
+  
+      <div class="column" style="background-color:#F7DBE6;width:16%;height: 1100px">
+
+       <!--<h4>Black & African Diaspora</h4>
+       <dt>Howard Robinson</dt>
+
+       <h4>Child Welfare</h4> 
+        <dt>Fuhua Zhai</dt>
+      <dt>Howard Robinson</dt>
+
+      <h4>Communities & Organizations</h4>  
+        <dt>Gregory Acevedo</dt>
+      <dt>Howard Robinson</dt>
+      <dt>Janna Heyman</dt>
+      <dt>Kimberly Hudson</dt>
+      <dt>Laura J Wernick</dt>
+      <dt>Lauri Goldkind</dt>
+      <dt>Elizabeth Matthews</dt>
+      <dt>Rahbel Rahman</dt>-->
+
+      <h4>Health/Public Health</h4> 
+      <dt>Abigail Ross</dt>
+      <dt>Cathy Berkman</dt>
+      <dt>Dana Marlowe</dt>
+      <dt>Derek Tice-Brown</dt>
+      <dt>Howard Robinson</dt>
+      <dt>Janna Heyman</dt>
+      <dt>Kimberly Hudson</dt>
+      <dt>Elizabeth Matthews</dt>
+      <dt>Rahbel Rahman</dt>
+      <dt>Sameena Azhar</dt>
+      <dt>Tina Maschi</dt> 
+
+     <h4>Individuals & Families</h4> 
+      <dt>Abigail Ross</dt>
+      <dt>Amy Horowitz</dt>
+      <dt>Cathy Berkman</dt>
+      <dt>Daniel Coleman</dt>
+      <dt>Derek Tice-Brown</dt>
+      <dt>Howard Robinson</dt>
+      <dt>Janna Heyman</dt>
+      <dt>Jordon DeVylder</dt>
+      <dt>Judith R. Smith</dt>
+      <dt>Lauri Goldkind</dt>
+      <dt>Elizabeth Matthews</dt>
+      <dt>Mary Ann Forgey</dt>
+      <dt>Sameena Azhar</dt>
+      <dt>Tina Maschi</dt>
+
+      <h4>International Social Work, and Global Issues</h4>  
+        <dt>Gregory Acevedo</dt>
+      <dt>Howard Robinson</dt>
+      <dt>Marciana Popescu</dt>
+      <dt>Mary Ann Forgey</dt>
+      <dt>Rahbel Rahman</dt>
+      <dt>Sameena Azhar</dt>
+      <dt>Winnie Kung</dt>
+
+    </div>
+
+     <div class="column" style="background-color:#EAC9D6;width:16%;height: 1100px">
+
+       <h4>Policy Practice</h4>  
+        <dt>Abigail Ross</dt>
+        <dt>Amy Horowitz</dt>
+        <dt>Cathy Berkman</dt>
+        <dt>Derek Tice-Brown</dt>
+        <dt>Fuhua Zhai</dt>
+        <dt>Gregory Acevedo</dt>
+        <dt>Howard Robinson</dt>
+        <dt>Janna Heyman</dt>
+        <dt>Kimberly Hudson</dt>
+        <dt>Laura J Wernick</dt>
+        <dt>Lauri Goldkind</dt>
+        <dt>Marciana Popescu</dt>
+        <dt>Sameena Azhar</dt>
+        <dt>Tina Maschi</dt>
+        <dt>Winnie Kung</dt>
+        <dt>Rahbel Rahman</dt>
+
+      <h4>Poverty & Inequality</h4>  
+      <dt>Fuhua Zhai</dt>
+      <dt>Gregory Acevedo</dt>
+      <dt>Howard Robinson</dt>
+      <dt>Laura J Wernick</dt>  
+
+
+      <h4>Program Developement & Evaluation</h4>
+      <dt>Abigail Ross</dt>
+      <dt>Amy Horowitz</dt>
+      <dt>Cathy Berkman</dt>
+      <dt>Daniel Coleman</dt>
+      <dt>Fuhua Zhai</dt>
+      <dt>Howard Robinson</dt>
+      <dt>Janna Heyman</dt>
+      <dt>Laura J Wernick</dt>
+      <dt>Lawrence Farmer</dt>
+      <dt>Marciana Popescu</dt>
+      <dt>Mary Ann Forgey</dt>
+      <dt>Tina Maschi</dt>
+
+      <!--<h4>Disability</h4>
+       <dt>Amy Horowitz</dt>
+       <dt>Howard Robinson</dt>
+       <dt>Laura J Wernick</dt>
+
+
+         <h4>Gender</h4>
+       <dt>Cathy Berkman</dt>
+       <dt>Derek Tice-Brown</dt>
+       <dt>Judith Smith</dt>
+       <dt>Kimberly Hudson</dt>
+       <dt>Laura J Wernick</dt>
+       <dt>Sameena Azhar</dt>
+
+
+    <h4>Health/Public Health</h4>	
+    	<dt>Abigail Ross</dt>
+    	<dt>Cathy Berkman</dt>
+    	<dt>Dana Marlowe</dt>
+    	<dt>Derek Tice-Brown</dt>
+    	<dt>Howard Robinson</dt>
+    	<dt>Janna Heyman</dt>
+    	<dt>Kimberly Hudson</dt>
+    	<dt>Elizabeth Matthews</dt>
+    	<dt>Rahbel Rahman</dt>
+    	<dt>Sameena Azhar</dt>
+    	<dt>Tina Maschi</dt> 
+
+     <h4>Individuals & Families</h4> 
+      <dt>Abigail Ross</dt>
+      <dt>Amy Horowitz</dt>
+      <dt>Cathy Berkman</dt>
+      <dt>Daniel Coleman</dt>
+      <dt>Derek Tice-Brown</dt>
+      <dt>Howard Robinson</dt>
+      <dt>Janna Heyman</dt>
+      <dt>Jordon DeVylder</dt>
+      <dt>Judith R. Smith</dt>
+      <dt>Lauri Goldkind</dt>
+      <dt>Elizabeth Matthews</dt>
+      <dt>Mary Ann Forgey</dt>
+      <dt>Sameena Azhar</dt>
+      <dt>Tina Maschi</dt>-->
+
+    </div>
+
+     <div class="column" style="background-color:#F7DBE6;width:16%;height: 1100px">
+
+
+      <h4>Research Design and Measurement</h4> 
+      <dt>Fuhua Zhai</dt>
+      <dt>Howard Robinson</dt>
+      <dt>Janna Heyman</dt>
+      <dt>Jordan DeVylder</dt>
+
+      <h4>School Social Work</h4> 
+      <dt>Howard Robinson</dt>
+      <dt>Lawrence Farmer</dt>
+
+      <h4>Social Groups & Intersectionality</h4> 
+
+      <h5>Race & Ethnicity</h5>
+        <dt>Cathy Berkman</dt>
+       <dt>Derek Tice-Brown</dt>
+       <dt>Gregory Acevedo</dt>
+       <dt>Howard Robinson</dt>
+       <dt>Kimberly Hudson</dt>
+       <dt>Laura J Wernick</dt>
+       <dt>Sameena Azhar</dt>
+       <dt>Winnie Kung</dt>
+       
+       <h5>Immigrants & Refugees</h5>
+       <dt>Fuhua Zhai</dt>
+       <dt>Gregory Acevedo</dt>
+       <dt>Howard Robinson</dt>
+       <dt>Marciana Popescu</dt>
+       <dt>Winnie kung</dt>
+
+       <h5>Disability</h5>
+       <dt>Amy Horowitz</dt>
+       <dt>Howard Robinson</dt>
+       <dt>Laura J Wernick</dt>
+
+       <!--<h4>Poverty & Inequality</h4>  
+        <dt>Fuhua Zhai</dt>
+      <dt>Gregory Acevedo</dt>
+      <dt>Howard Robinson</dt>
+      <dt>Laura J Wernick</dt>  
+
+       <h4>International Social Work, and Global Issues</h4>  
+        <dt>Gregory Acevedo</dt>
+      <dt>Howard Robinson</dt>
+      <dt>Marciana Popescu</dt>
+      <dt>Mary Ann Forgey</dt>
+      <dt>Rahbel Rahman</dt>
+      <dt>Sameena Azhar</dt>
+      <dt>Winnie Kung</dt>
+
+      <h4>Military Service Members, Veterans & Their Families</h4>  
+      <dt>Howard Robinson</dt>
+       <dt>Mary Ann Forgey</dt>
+
+       <h4>Policy Practice</h4>  
+        <dt>Abigail Ross</dt>
+        <dt>Amy Horowitz</dt>
+        <dt>Cathy Berkman</dt>
+        <dt>Derek Tice-Brown</dt>
+        <dt>Fuhua Zhai</dt>
+        <dt>Gregory Acevedo</dt>
+        <dt>Howard Robinson</dt>
+        <dt>Janna Heyman</dt>
+        <dt>Kimberly Hudson</dt>
+        <dt>Laura J Wernick</dt>
+        <dt>Lauri Goldkind</dt>
+        <dt>Marciana Popescu</dt>
+        <dt>Sameena Azhar</dt>
+        <dt>Tina Maschi</dt>
+        <dt>Winnie Kung</dt>
+        <dt>Rahbel Rahman</dt>-->
+
+     </div>
+
+ <div class="column" style="background-color:#EAC9D6;width:16%;height: 1100px">
+
+
+      <h5>Gender & Sexuality</h5>
+       <dt>Cathy Berkman</dt>
+       <dt>Derek Tice-Brown</dt>
+       <dt>Judith Smith</dt>
+       <dt>Kimberly Hudson</dt>
+       <dt>Laura J Wernick</dt>
+       <dt>Sameena Azhar</dt>
+      
+
+      <h4>Social Work Education</h4> 
+      <dt>Abigail Ross</dt>
+      <dt>Howard Robinson</dt>
+      <dt>Dana Marlowe</dt>
+      <dt>Janna Heyman</dt>
+      <dt>Kimberly Hudson</dt>
+      <dt>Mary Ann Forgey</dt>
+      <dt>Tina Maschi</dt>
+      <dt>Winnie Kung</dt>
+      <dt>Jordon DeVylder</dt>
+      <dt>Lawrence Farmer</dt>
+
+      <h4>Stress & Coping, Trauma & Resilience</h4> 
+      <dt>Amy Horowitz</dt>
+      <dt>Derek TIce-Brown</dt>
+      <dt>Howard Robinson</dt>
+      <dt>Jordon DeVylder</dt>
+      <dt>Tina Maschi</dt>
+      <dt>Winnie Kung</dt>
+
+      <h4>Substance & Addiction</h4> 
+        <dt>Janna Heyman</dt>
+      <dt>Sameena Azhar</dt>  
+     </div>
+
+
+ <div class="column" style="background-color:#F7DBE6;width:16%;height: 1100px">
+
+  <h4>Violence</h4>  
+  <dt>Howard Robinson</dt>
+  <dt>Judith R. Smith</dt>
+  <dt>Marciana Popescu</dt>
+  <dt>Sameena Azhar</dt>
+       
+
+  <!--<div class="column" style="background-color:#F7DBE6;width:16%;">
+  <h4>Child Welfare</h4>	
+        <dt>Fuhua Zhai</dt>
+    	<dt>Howard Robinson</dt>
+
+    <h4>Crime & Criminal Justice</h4>	
+        <dt>Daniel Coleman</dt>
+    	<dt>Jordan Devylder</dt>
+    	<dt>Tina Maschi</dt>
+
+     <h4>Substance Misuse and Addictive Behaviors</h4>	
+        <dt>Janna Heyman</dt>
+    	<dt>Sameena Azhar</dt>
+  </div>
+
+  <div class="column" style="background-color:#EAC9D6;width:16%;">
+   <h4>Violence against Women & Children</h4>	
+        <dt>Howard Robinson</dt>
+    	<dt>Judith R. Smith</dt>
+    	<dt>Marciana Popescu</dt>
+    	<dt>Sameena Azhar</dt>
+
+   <h4>Adolescent & Youth Development</h4>	
+        <dt>Abigail Ross</dt>
+    	<dt>Howard Robinson</dt>
+    	<dt>Jorden Devylder</dt>
+    	<dt>Lawrence Farmer</dt>
+    	<dt>Tina Maschi</dt>
+
+   <h4>School Social Work</h4>	
+        <dt>Howard Robinson</dt>
+    	<dt>Lawrence Farmer</dt>
+  </div>
+
+  <div class="column" style="background-color:#F7DBE6;width:16%;">
+    <h4>Communities & Organizations</h4>	
+        <dt>Gregory Acevedo</dt>
+    	<dt>Howard Robinson</dt>
+    	<dt>Janna Heyman</dt>
+    	<dt>Kimberly Hudson</dt>
+    	<dt>Laura J Wernick</dt>
+    	<dt>Lauri Goldkind</dt>
+    	<dt>Elizabeth Matthews</dt>
+    	<dt>Rahbel Rahman</dt>
+
+   <h4>Inequality, Poverty, & Social Welfare Policy</h4>	
+        <dt>Fuhua Zhai</dt>
+    	<dt>Gregory Acevedo</dt>
+    	<dt>Howard Robinson</dt>
+    	<dt>Laura J Wernick</dt>    
+  </div>
+
+  <div class="column" style="background-color:#EAC9D6;width:16%;">
+   <h4>Aging Services & Gerontology</h4>	
+        <dt>Amy Horowitz</dt>
+    	<dt>Cathy Berkman</dt>
+    	<dt>Janna Heyman</dt>
+    	<dt>Judith R Smith</dt>
+    	<dt>Tina Maschi</dt>
+
+   <h4>International Social Work, and Global Issues</h4>	
+        <dt>Gregory Acevedo</dt>
+    	<dt>Howard Robinson</dt>
+    	<dt>Marciana Popescu</dt>
+    	<dt>Mary Ann Forgey</dt>
+    	<dt>Rahbel Rahman</dt>
+    	<dt>Sameena Azhar</dt>
+    	<dt>Winnie Kung</dt>
+  </div>
+
+  <div class="column" style="background-color:#F7DBE6;width:16%;">
+   <h4>Social Work Education</h4>	
+        <dt>Abigail Ross</dt>
+    	<dt>Howard Robinson</dt>
+    	<dt>Dana Marlowe</dt>
+    	<dt>Janna Heyman</dt>
+    	<dt>Kimberly Hudson</dt>
+    	<dt>Mary Ann Forgey</dt>
+    	<dt>Tina Maschi</dt>
+    	<dt>Winnie Kung</dt>
+    	<dt>Jordon DeVylder</dt>
+    	<dt>Lawrence Farmer</dt>
+
+    	<h4>Military Service Members, Veterans & Their Families</h4>	
+    	<dt>Howard Robinson</dt>
+    	 <dt>Mary Ann Forgey</dt>
+  </div>
+</div>
+<div class="row">
+    <h3 style="text-align: center;width:96%;background-color:#6A032C;height:30px">Research Areas: Social Groups</h3>
+
+
+  <div class="column" style="background-color:#F7DBE6;width:24%;">
+   <h4>Race & Ethnicity</h4>
+       <dt>Cathy Berkman</dt>
+       <dt>Derek Tice-Brown</dt>
+       <dt>Gregory Acevedo</dt>
+       <dt>Howard Robinson</dt>
+       <dt>Kimberly Hudson</dt>
+       <dt>Laura J Wernick</dt>
+       <dt>Sameena Azhar</dt>
+       <dt>Winnie Kung</dt>
+
+       <h4>Black & African Diaspora</h4>
+       <dt>Howard Robinson</dt>
+    	</div>
+
+    	<div class="column" style="background-color:#EAC9D6;width:24%;">
+   <h4>Immigrants & Refugees</h4>
+       <dt>Fuhua Zhai</dt>
+       <dt>Gregory Acevedo</dt>
+       <dt>Howard Robinson</dt>
+       <dt>Marciana Popescu</dt>
+       <dt>Winnie kung</dt>
+
+       	<h4>Asian & Asian-Pacific Islander Focused-Research</h4>
+       <dt>Cathy Berkman</dt>
+       <dt>Fuhua Zhai</dt>
+       <dt>Sameena Azhar</dt>
+       <dt>Winnie Kung</dt>
+    </div>
+
+<div class="column" style="background-color:#F7DBE6;width:24%;">
+   <h4>American Indian, Alaska Native, Native Hawaiian & Global Indigenous Populations</h4>
+       <dt>Howard Robinson</dt>
+   <h4>Disability</h4>
+       <dt>Amy Horowitz</dt>
+       <dt>Howard Robinson</dt>
+       <dt>Laura J Wernick</dt>
+   </div>
+
+   	<div class="column" style="background-color:#EAC9D6;width:24%;">
+   <h4>Gender</h4>
+       <dt>Cathy Berkman</dt>
+       <dt>Derek Tice-Brown</dt>
+       <dt>Judith Smith</dt>
+       <dt>Kimberly Hudson</dt>
+       <dt>Laura J Wernick</dt>
+       <dt>Sameena Azhar</dt>
+    <h4>Sexual Orientation and Gender Identity</h4>
+       <dt>Cathy Berkman</dt>
+       <dt>Derek Tice-Brown</dt>
+       <dt>Kimberly Hudson</dt>
+       <dt>Laura J Wernick</dt>
+       <dt>Sameena Azhar</dt>
+       <dt>Tina Maschi</dt>-->
+   </div>
+</div>
+</table>
+</section>
+<section class="tab-panel" id="Faculty Research">
+	<table id="Faculty Research" style="width:20%; background-color:#EAC9D6; text-align: left">
+     <div class="row">
+  <div class="column" style="background-color:#EAC9D6;width:33%; text-align: center;height: 2100px">
+    <h3 style="color:black">A</h3>	
+    <h4>Gregory Acevedo</h4>
+    <ul type="square" style="text-align: left">
+    	<li style="font-size: 13px"><b>Communities & Organizations</b></li>
+    	<li style="font-size: 13px"><b>Poverty & Inequality</b></li>
+    	<li style="font-size: 13px"><b>International Social Work, and Global Issues</b></li>
+      <li style="font-size: 13px"><b>Race & Ethnicity</b></li>
+      <li style="font-size: 13px"><b>Immigrants & Refugees</b></li>
+      <li style="font-size: 13px"><b>Policy Practice</b></li>
+
+    </ul>
+     <h4>Sameena Azhar</h4>
+     <ul type="square" style="text-align: left">
+    	<li style="font-size: 13px"><b>Health/Public Health</b></li>
+    	<li style="font-size: 13px"><b>Substance and Addiction</b></li>
+    	<li style="font-size: 13px"><b>Violence</b></li>
+    	<li style="font-size: 13px"><b>International Social Work, and Global Issues</b></li>
+      <li style="font-size: 13px"><b>Race & Ethnicity</b></li>
+    <li style="font-size: 13px"><b>Gender & Sexuality</b></li>
+    <li style="font-size: 13px"><b>Individuals & Families</b></li>
+    <li style="font-size: 13px"><b>Policy Practice</b></li>
+   
+    </ul>
+   <h3 style="color:black;">B</h3>	
+     <h4>Cathy Berkman</h4>
+     <ul type="square" style="text-align: left">
+    	<li style="font-size: 13px"><b>Health/Public Health</b></li>
+    	<li style="font-size: 13px"><b>Aging & Gerontology</b></li>
+      <li style="font-size: 13px"><b>Race & Ethnicity</b></li>
+     <li style="font-size: 13px"><b>Gender & Sexuality</b></li>
+     <li style="font-size: 13px"><b>Individuals & Families</b></li>
+    <li style="font-size: 13px"><b>Policy Practice</b></li>
+    <li style="font-size: 13px"><b>Program Developement & Evaluation</b></li>
+    </ul>
+   <h3 style="color:black;">C</h3>	
+     <h4>Daniel Coleman</h4>
+     <ul type="square" style="text-align: left">
+    	<li style="font-size: 13px"><b>Health/ Public Health</b></li>
+      <li style="font-size: 13px"><b>Criminal Justice</b></li>
+      <li style="font-size: 13px"><b>Individuals & Families</b></li>
+      <li style="font-size: 13px"><b>Program Developement & Evaluation</b></li>
+    </ul>
+    <h3 style="color:black;">D</h3>	
+     <h4>Jordan DeVylder</h4>
+     <ul type="square" style="text-align: left">
+    	<li style="font-size: 13px"><b>Criminal Justice</b></li>
+    	<li style="font-size: 13px"><b>Aging Services & Gerontology</b></li>
+      <li style="font-size: 13px"><b>Adolescent & Youth Development</b></li>
+      <li style="font-size: 13px"><b>Individuals & Families</b></li>
+      <li style="font-size: 13px"><b>Research Design & Measurement</b></li>
+      <li style="font-size: 13px"><b>Social Work Education</b></li>
+      <li style="font-size: 13px"><b>Stress & Coping, Trauma & Resilience</b></li>
+    </ul>
+   <!-- <h4>E</h4>-->
+   <h3 style="color:black;">F</h3>	
+     <h4>Lawrence Farmer</h4>
+     <ul type="square" style="text-align: left">
+    	<li style="font-size: 13px"><b>Adolescent & Youth Development</b></li>
+    	<li style="font-size: 13px"><b>School Social Work</b></li>
+    	<li style="font-size: 13px"><b>Social Work Education</b></li>
+      <li style="font-size: 13px"><b>Program Developement & Evaluation</b></li>
+    </ul>
+
+     <h4>Mary Ann Forgey</h4>
+     <ul type="square" style="text-align: left">
+    	<li style="font-size: 13px"><b>International Social Work, & Global Issues</b></li>
+    	<li style="font-size: 13px"><b>Social Work Education</b></li>
+    	<li style="font-size: 13px"><b>Individuals and Families</b></li>
+      <li style="font-size: 13px"><b>Program Developement & Evaluation</b></li>
+    </ul>
+
+   <h3 style="color:black;">G</h3>	
+     <h4>Lauri Goldkind</h4>
+     <ul type="square" style="text-align: left">
+      <li style="font-size: 13px"><b>Health</b></li>
+      <li style="font-size: 13px"><b>Individuals & Families</b></li>
+    <li style="font-size: 13px"><b>Policy Practice</b></li>
+    <li style="font-size: 13px"><b>Communities & Organizations</b></li>
+    </ul>
+  </div>
+    <div class="column" style="background-color:#F7DBE6;width:33%;text-align: center;height: 2100px">
+    
+   <h3 style="color:black;">H</h3>
+   <h4>Janna Heyman</h4>
+     <ul type="square" style="text-align: left">
+      <li style="font-size: 13px"><b>Health/Public Health</b></li>
+      <li style="font-size: 13px"><b>Research Design & Measurement</b></li>
+      <li style="font-size: 13px"><b>Substance & Addiction</b></li>
+      <li style="font-size: 13px"><b>Communities & Organizations</b></li>
+      <li style="font-size: 13px"><b>Aging & Gerontology</b></li>
+      <li style="font-size: 13px"><b>Social Work Education</b></li>
+      <li style="font-size: 13px"><b>Individuals & Families</b></li>
+    <li style="font-size: 13px"><b>Policy Practice</b></li>
+    <li style="font-size: 13px"><b>Program Developement & Evaluation</b></li>
+    </ul>
+
+    <h4>Amy Horowitz</h4>
+    <ul type="square" style="text-align: left">
+      <li style="font-size: 13px"><b>Aging & Gerontology</b></li>
+      <li style="font-size: 13px"><b>Disability</b></li>
+      <li style="font-size: 13px"><b>Individuals & Families</b></li>
+    <li style="font-size: 13px"><b>Policy Practice</b></li>
+    <li style="font-size: 13px"><b>Program Developement & Evaluation</b></li>
+    <li style="font-size: 13px"><b>Stress & Coping, Trauma & Resilience</b></li>
+    </ul>
+
+   <h4>Kimberly Hudson</h4>
+    <ul type="square" style="text-align: left">
+      <li style="font-size: 13px"><b>Race & Ethnicity</b></li>
+      <li style="font-size: 13px"><b>Gender</b></li>
+      <li style="font-size: 13px"><b>Sexual Orientation & Gender Identity</b></li>
+      <li style="font-size: 13px"><b>Policy Practice</b></li>
+      <li style="font-size: 13px"><b>Communities & Organizations</b></li>
+      <li style="font-size: 13px"><b>Health/Public Health</b></li>
+      <li style="font-size: 13px"><b>Social Work Education</b></li>
+    </ul>
+
+
+  <h3 style="color:black;">K</h3>
+  <h4>Winnie Kung</h4>
+  <ul type="square" style="text-align: left">
+      <li style="font-size: 13px"><b>International Social Work, & Global Issues</b></li>
+      <li style="font-size: 13px"><b>Social Work Education</b></li>
+      <li style="font-size: 13px"><b>Race & Ethnicity</b></li>
+       <li style="font-size: 13px"><b>Immigrants & Refugees</b></li>
+   <li style="font-size: 13px"><b>Asian & Asian-Pacific Islander Focused-Research</b></li>
+   <li style="font-size: 13px"><b>Policy Practice</b></li>
+   <li style="font-size: 13px"><b>Stress & Coping, Trauma & Resilience</b></li>
+    </ul>
+    <h3 style="color:black;">M</h3>
+  <h4>Dana Marlowe</h4>
+  <ul type="square" style="text-align: left">
+      <li style="font-size: 13px"><b>Health/Public Health</b></li>
+      <li style="font-size: 13px"><b>Social Work Education</b></li>
+    </ul>
+
+    <h4>Tina Maschi </h4>
+  <ul type="square" style="text-align: left">
+      <li style="font-size: 13px"><b>Health/Public Health</b></li>
+      <li style="font-size: 13px"><b>Criminal Justice</b></li>
+      <li style="font-size: 13px"><b>Adolescent & Youth Development</b></li>
+      <li style="font-size: 13px"><b>Aging & Gerontology</b></li>
+      <li style="font-size: 13px"><b>Social Work Education</b></li>
+      <li style="font-size: 13px"><b>Sexual Orientation & Gender Identity</b></li>
+      <li style="font-size: 13px"><b>Individuals & Families</b></li>
+    <li style="font-size: 13px"><b>Policy Practice</b></li>
+    <li style="font-size: 13px"><b>Program Developement & Evaluation</b></li>
+    <li style="font-size: 13px"><b>Stress & Coping, Trauma & Resilience</b></li>
+    </ul>
+
+    <h4>Elizabeth Matthews</h4>
+  <ul type="square" style="text-align: left">
+      <li style="font-size: 13px"><b>Health/Public Health</b></li>
+      <li style="font-size: 13px"><b>Communities & Organizations</b></li>
+      <li style="font-size: 13px"><b>Individuals & Families</b></li>
+    </ul>
+
+    <h3 style="color:black;">P</h3>
+  <h4>Marciana Popescu</h4>
+  <ul type="square" style="text-align: left">
+      <li style="font-size: 13px"><b>Violence</b></li>
+      <li style="font-size: 13px"><b>International Social Work, and Global Issues</b></li>
+      <li style="font-size: 13px"><b>Immigrants & Refugees</b></li>
+      <li style="font-size: 13px"><b>Policy Practice</b></li>
+      <li style="font-size: 13px"><b>Program Developement & Evaluation</b></li>
+    </ul>
+  </div>
+
+  <div class="column" style="background-color:#EAC9D6;width:33%;text-align: center;height: 2100px">
+
+        <h3 style="color:black;">R</h3>
+  <h4>Rahbel Rahman</h4>
+  <ul type="square" style="text-align: left">
+      <li style="font-size: 13px"><b>Health/Public Health</b></li>
+      <li style="font-size: 13px"><b>Communities & Organizations</b></li>
+      <li style="font-size: 13px"><b>International Social Work, and Global Issues</b></li>
+      <li style="font-size: 13px"><b>Policy Practice</b></li>
+    </ul>
+
+<h4>Howard Robinson</h4>
+  <ul type="square" style="text-align: left">
+      <li style="font-size: 13px"><b>Health/Public Health</b></li>
+      <li style="font-size: 13px"><b>Research Design & Measurement</b></li>
+      <li style="font-size: 13px"><b>Child Welfare</b></li>
+      <li style="font-size: 13px"><b>Violence</b></li>
+      <li style="font-size: 13px"><b>Adolescent & Youth Development</b></li>
+      <li style="font-size: 13px"><b>School Social Work</b></li>
+      <li style="font-size: 13px"><b>Communities & Organizations</b></li>
+      <li style="font-size: 13px"><b>Poverty & Inequality</b></li>
+      <li style="font-size: 13px"><b>International Social Work, and Global Issues</b></li>
+      <li style="font-size: 13px"><b>Social Work Education</b></li>
+      <li style="font-size: 13px"><b>Race & Ethnicity</b></li>
+      <li style="font-size: 13px"><b>Immigrants & Refugees</b></li>
+      <li style="font-size: 13px"><b>Disability</b></li>
+      <li style="font-size: 13px"><b>Individuals & Families</b></li>
+    <li style="font-size: 13px"><b>Policy Practice</b></li>
+    <li style="font-size: 13px"><b>Program Developement & Evaluation</b></li>
+    <li style="font-size: 13px"><b>Stress & Coping, Trauma & Resilience</b></li>
+    </ul>
+
+    <h4>Abigail Ross</h4>
+  <ul type="square" style="text-align: left">
+      <li style="font-size: 13px"><b>Health/Public Health</b></li>
+      <li style="font-size: 13px"><b>Adolescent & Youth Development</b></li>
+      <li style="font-size: 13px"><b>Social Work Education</b></li>
+      <li style="font-size: 13px"><b>Policy Practice</b></li>
+      <li style="font-size: 13px"><b>Individuals & Families</b></li>
+      <li style="font-size: 13px"><b>Program Developement & Evaluation</b></li>
+      </ul>
+
+  <h3 style="color:black;">S</h3>
+      <h4>Judith R. Smith</h4>
+  <ul type="square" style="text-align: left">
+      <li style="font-size: 13px"><b>Violence</b></li>
+      <li style="font-size: 13px"><b>Aging & Gerontology</b></li>
+      <li style="font-size: 13px"><b>Gender</b></li>
+      <li style="font-size: 13px"><b>Individuals & Families</b></li>
+    </ul>
+
+  <h3 style="color:black;">T</h3>
+      <h4>Derek Tice-Brown</h4>
+  <ul type="square" style="text-align: left">
+      <li style="font-size: 13px"><b>Health/Public Health</b></li>
+      <li style="font-size: 13px"><b>Race & Ethnicity</b></li> 
+      <li style="font-size: 13px"><b>Gender</b></li> 
+      <li style="font-size: 13px"><b>Sexual Orientation and Gender Identity</b></li>
+      <li style="font-size: 13px"><b>Individuals & Families</b></li>
+    <li style="font-size: 13px"><b>Policy Practice</b></li>
+    <li style="font-size: 13px"><b>Stress & Coping, Trauma & Resilience</b></li>
+    </ul>
+    <h3 style="color:black;">W</h3>
+      <h4>Laura J. Wernick</h4>
+  <ul type="square" style="text-align: left">
+      <li style="font-size: 13px"><b>Communities & Organizations</b></li>
+      <li style="font-size: 13px"><b>Poverty & Inequality</b></li>
+      <li style="font-size: 13px"><b>Race & Ethnicity</b></li>
+      <li style="font-size: 13px"><b>Disability</b></li>
+      <li style="font-size: 13px"><b>Gender</b></li> 
+      <li style="font-size: 13px"><b>Sexual Orientation and Gender Identity</b></li>
+      <li style="font-size: 13px"><b>Policy Practice</b></li>
+      <li style="font-size: 13px"><b>Program Developement & Evaluation</b></li>
+    </ul>
+
+    <h3 style="color:black;">Z</h3>
+      <h4>Fuhua Zhai</h4>
+  <ul type="square" style="text-align: left">
+    <li style="font-size: 13px"><b>Research Design & Measurement</b></li>
+      <li style="font-size: 13px"><b>Child Welfare</b></li>
+      <li style="font-size: 13px"><b>Poverty & Inequality</b></li>
+     <li style="font-size: 13px"><b>Immigrants & Refugees</b></li>
+     <li style="font-size: 13px"><b>Asian & Asian-Pacific Islander Focused-Research</b></li>
+     <li style="font-size: 13px"><b>Policy Practice</b></li>
+     <li style="font-size: 13px"><b>Program Developement & Evaluation</b></li>
+    </ul>
+</div>
+</div>
+</table>
+</section>
+  
+
+
+	
+
+
+	<!--<h3>Health</h3>	
+  <tr>
+    <td>Abby Ross</td>
+    </tr>
+  <tr>
+    <td>Cathy Berkman</td>
+  </tr>
+   <tr>
+    <td>Dana Marlowe</td>
+  </tr>
+  <tr>
+    <td>Derek Tice-Brown</td>
+  </tr>
+  <tr>
+    <td>Howard Robinson</td>
+  </tr>
+  <tr>
+    <td>Janna Heyman</td>
+  </tr>
+  <tr>
+    <td>Kimberly Hudson</td>
+  </tr>
+  <tr>
+    <td>Elizabeth Matthews</td>
+  </tr>
+  <tr>
+    <td>Rahbel Rahman</td>
+  </tr>
+  <tr>
+    <td>Sameena Azhar</td>
+  </tr>
+  <tr>
+    <td>Tina Maschi</td>
+  </tr>
+</table>
+
+<table id="Research Areas" style="width:20%; background-color:#EAC9D6; text-align: left">
+	<h3 style="width: 20%">Research Design and Measurement</h3>	
+  <tr>
+    <td>Fuhua Zhai</td>
+    </tr>
+  <tr>
+    <td>Howard Robinson</td>
+  </tr>
+   <tr>
+    <td>Janna Heyman</td>
+  </tr>
+  <tr>
+    <td>Jordan DeVylder</td>
+  </tr>
+</table>
+<table id="Research Areas" style="width:20%; background-color:#EAC9D6; text-align: left">
+	<h3 style="width: 20%">Research Design and Measurement</h3>	
+  <tr>
+    <td>Fuhua Zhai</td>
+    </tr>
+  <tr>
+    <td>Howard Robinson</td>
+  </tr>
+   <tr>
+    <td>Janna Heyman</td>
+  </tr>
+  <tr>
+    <td>Jordan DeVylder</td>
+  </tr>
+</table>
+
+<!--<div class="tab-panels">
+<section class="tab-panel" id="Dean">
+<table id="Deans" style="width:100%">
+	<tbody>
+		<tr>
+			<td width="33%">
+			<div class="container"><a href="#DebraMcPhee"><img alt="Debra M. McPhee" src="https://www.fordham.edu/images/Debra_McPhee_GSS_Dean.jpg" style="width:100%;" /> </a>
+			<div class="text-block">
+			<p><a href="#DebraMcPhee" style="color:white;text-decoration: none">Debra M. McPhee, PhD</a></p>
+			</div>
+
+			<div class="overlay" id="DebraMcPhee">
+			<div class="popup">
+			<h3><strong>Debra M. McPhee, PhD</strong></h3>
+			<a class="close" href="#">X</a>
+
+			<div class="content">
+			<p><strong>Dean</strong></p>
+
+			<p>Tel: 212-636-6616<br />
+			Email: <a href="mailto:dmcphee1@fordham.edu" style="color:#a80024;">dmcphee1@fordham.edu</a><br />
+			Office: Lincoln Center - Lowenstein 726</p>
+			</div>
+			</div>
+			</div>
+			</div>
+			</td>
